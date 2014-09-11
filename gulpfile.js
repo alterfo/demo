@@ -9,11 +9,11 @@ var lrserver = lr();
 var minifyCSS = require('gulp-minify-css');
 var embedlr = require('gulp-embedlr');
 var ecstatic = require('ecstatic');
-var imagemin = require('gulp-imagemin');
- 
+// var imagemin = require('gulp-imagemin');
+
 var livereloadport = 35729,
     serverport = 5001;
- 
+
 gulp.task('scripts', function() {
     return gulp.src(['js/*.js'])
         .pipe(browserify())
@@ -21,7 +21,7 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist/js'))
         .pipe(refresh(lrserver));
 });
- 
+
 gulp.task('styles', function() {
     return gulp.src(['css/*.css', 'css/*.less'])
         .pipe(less())
@@ -30,7 +30,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('dist/css'))
         .pipe(refresh(lrserver));
 });
- 
+
 gulp.task('serve', function() {
   //Set up your static fileserver, which serves files in the build dir
   http.createServer(ecstatic({ root: __dirname + '/dist' })).listen(serverport);
@@ -49,7 +49,7 @@ gulp.task('html', function() {
  
 gulp.task('assets', function() {
     return gulp.src("assets/**")
-        .pipe(imagemin({optimizationLevel: 5}))
+        //.pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest('dist/assets/'))
         .pipe(refresh(lrserver));
 });
