@@ -9,6 +9,7 @@ var lrserver = lr();
 var minifyCSS = require('gulp-minify-css');
 var embedlr = require('gulp-embedlr');
 var ecstatic = require('ecstatic');
+var path = require('path');
 // var imagemin = require('gulp-imagemin');
 
 var livereloadport = 35729,
@@ -23,8 +24,10 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src(['css/*.css', 'css/*.less'])
-        .pipe(less())
+    gulp.src(['css/*.css', 'css/*.less'])
+          .pipe(less({
+			paths: [ path.join(__dirname, 'less', 'includes') ]
+		  }))
         .on('error', console.log)
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css'))
@@ -57,7 +60,7 @@ gulp.task('assets', function() {
 // Requires gulp >=v3.5.0
 gulp.task('watch', function () {
     gulp.watch('src/**', ['scripts']);
-    gulp.watch('css/**', ['styles']);
+    gulp.watch('css/*.css', ['styles']);
     gulp.watch('*.html', ['html']);
     gulp.watch('assets/**', ['assets']);
 });

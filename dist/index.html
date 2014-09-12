@@ -17,31 +17,29 @@
     <!--[if lt IE 7]>
  
     <link rel="stylesheet" type="text/css" media="all" href="css/ie6.css"/><![endif]-->
-
-
-
 </head>
 
 <body>
 
-    <!-- 2. Заголовок и навигация, сразу расставляем классы по БЭМ -->
+    <!-- 2. Заголовок и навигация, сразу расставляем -->
 
-    <header class="header clearfix">
-        <h1 class="header-text"><a href="/">Сайт с нуля</a></h1>
-        <nav class="header-nav">
-            <ul class="header-nav-list">
-                <li class="header-nav-item"><a href="#about">О нас</a>
+    <header class="header body">
+        <h1><a href="/">Сайт с нуля</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Анонс</a>
                 </li>
-                <li class="header-nav-item"><a href="#seminars">Семинары</a>
+                <li><a href="#seminars">Семинары</a>
                 </li>
-                <li class="header-nav-item"><a href="#contacts">Контактная иняормация</a>
+                <li><a href="#contacts">Контактная информация</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-<!-- 3. Баннер-фича, здесь лучше всего подходит тэг aside -->
-    <aside class="clearfix">
+    <!-- 3. Баннер-фича, здесь лучше всего подходит тэг aside -->
+    <aside class="featured body" id="about">
         <figure>
             <img src="i/featured.png" alt="Анонс семинара" width="200px" height="200px" class="featured-img">
         </figure>
@@ -50,10 +48,169 @@
             <h3>Адаптивная верстка</h3>
         </hgroup>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quas, eius! Vel enim nemo sed optio molestias suscipit, ex minus similique commodi, sint, provident sequi iusto? Dolorum, ad, eveniet! Odit!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quas, eius! Vel enim nemo sed optio molestias suscipit, ex minus similique commodi, <a href="#">sint</a>, provident sequi iusto? Dolorum, ad, eveniet! Odit!</p>
     </aside>
 
 
+
+    <!-- 4. Секция с контентом-->
+    <section class="content body" id="seminars">
+
+        <ol id="posts-list" class="hfeed">
+
+            <li>
+                <article class="hentry">
+                    <header>
+                        <h2 class="entry-title"><a href="#" rel="bookmark" title="Сайт с нуля">Сайт с нуля</a>
+                        </h2>
+                    </header>
+
+                    <footer class="post-info">
+                        <abbr class="published" title="2005-10-10T14:07:00-07:00">
+                            <!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+                            18-го октября 2014
+                        </abbr>
+
+                        <address class="vcard author">
+                            Ведущий: <a class="url fn" href="#">Олег Сидоркин</a>
+
+                        </address>
+                    </footer>
+                    <!-- /.post-info -->
+
+                    <div class="entry-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus. <a href="#">Больше слов >></a></p>
+                        
+                    </div>
+                    <!-- /.entry-content -->
+                </article>
+            </li>
+
+            <li>
+                <article class="hentry">
+                    <header>
+                        <h2 class="entry-title"><a href="#" rel="bookmark" title="Как развить креативность">Как развить креативность</a>
+                        </h2>
+                    </header>
+
+                    <footer class="post-info">
+                        <abbr class="published" title="2005-10-10T14:07:00-07:00">
+                            <!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+                            15-го ноября 2014
+                        </abbr>
+
+                        <address class="vcard author">
+                            Ведущий: <a class="url fn" href="#">Олег Сидоркин</a>
+
+                        </address>
+                    </footer>
+                    <!-- /.post-info -->
+
+                    <div class="entry-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus. <a href="#">Больше креативности >></a></p>
+
+                    </div>
+                    <!-- /.entry-content -->
+                </article>
+            </li>
+
+
+            <li>
+                <article class="hentry">
+                    <header>
+                        <h2 class="entry-title"><a href="#" rel="bookmark" title="Основы Javascript">Основы Javascript</a>
+                        </h2>
+                    </header>
+
+                    <footer class="post-info">
+                        <abbr class="published" title="2005-10-10T14:07:00-07:00">
+                            <!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+                            13-го декабря 2014
+                        </abbr>
+
+                        <address class="vcard author">
+                            Ведущий: <a class="url fn" href="#">Олег Сидоркин</a>
+
+                        </address>
+                    </footer>
+                    <!-- /.post-info -->
+
+                    <div class="entry-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus. <a href="#">Больше дела >></a></p>
+
+                    </div>
+                    <!-- /.entry-content -->
+                </article>
+            </li>
+        </ol>
+        <!-- /#posts-list -->
+
+    </section>
+    <!-- /#content -->
+
+
+    <section class="extras body" id="contacts">
+        <div class="blogroll">
+            <h2>Полезные ресурсы</h2>
+            <ul>
+
+                <li><a href="#" rel="external">HTML5 Doctor</a>
+                </li>
+                <li><a href="#" rel="external">HTML5 Spec (working draft)</a>
+                </li>
+                <li><a href="#" rel="external">Smashing Magazine</a>
+                </li>
+
+                <li><a href="#" rel="external">W3C</a>
+                </li>
+                <li><a href="#" rel="external">Wordpress</a>
+                </li>
+                <li><a href="#" rel="external">Wikipedia</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.blogroll -->
+
+        <div class="social">
+            <h2>Контактная информация</h2>
+            <ul>
+
+                <li><a href="#" rel="me">linkedin</a>
+                </li>
+                <li><a href="#" rel="me">vkontakte</a>
+                </li>
+                <li><a href="#" rel="me">facebook</a>
+                </li>
+
+                <li><a href="#" rel="me">twitter</a>
+                </li>
+                <li><a href="#" rel="alternate">superjob</a>
+                </li>
+                <li><a href="#" rel="me">habrahabr</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.social -->
+    </section>
+    <!-- /#extras -->
+
+
+
+    <footer class="body">
+        <address id="about" class="vcard body">
+            <span class="primary">
+                <strong><a href="#" class="fn url">О проекте</a>
+                </strong>
+            </span>
+
+            <span class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum inventore nisi excepturi sint voluptatibus possimus, velit saepe facere officia, eum non adipisci accusantium dolorem impedit maxime praesentium est! Eum, dolores!</span>
+
+        </address>
+        <!-- /#about -->
+        <p>2014 &copy; <a href="http://oleg-sidorkin.ru">Олег Сидоркин</a>.</p>
+    </footer>
+    <!-- /#contentinfo -->
 
 
 
